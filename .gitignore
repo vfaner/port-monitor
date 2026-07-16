@@ -1,0 +1,66 @@
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+*.manifest
+*.spec
+.Python
+
+# ============ 虚拟环境 ============
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ============ 测试 / 覆盖率 ============
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+
+# ============ IDE ============
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ============ 操作系统 ============
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============ PyInstaller 打包产物 ============
+build/
+dist/
+*.spec
+
+# ============ 日志 / 临时文件 ============
+*.log
+*.tmp
+*.bak
+logs/
+
+# ============ 敏感信息 / 用户私有 ============
+# 收款码图片属于个人隐私，不入库；仓库只保留 assets/README.md 说明
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
+!assets/README.md
+.env
+.env.*
+secrets.*
