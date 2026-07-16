@@ -35,10 +35,11 @@ Grab the file for your OS from the [Releases page](https://github.com/vfaner/por
 |---|---|---|
 | Windows 10/11 (x64)   | `PortMonitor-windows-x64.zip`  | Unzip → double-click `PortMonitor.exe` |
 | macOS (Apple Silicon) | `PortMonitor-macos-arm64.zip`  | Unzip → double-click `PortMonitor.app`; on first run, right-click → Open if Gatekeeper blocks it |
-| macOS (Intel)         | `PortMonitor-macos-intel.zip`  | Same as above |
+| macOS (Intel)         | *(no prebuilt binary)*         | See "Run from source" below |
 | Linux (x64)           | `PortMonitor-linux-x64.tar.gz` | `tar xzf ...` → `./PortMonitor` |
 
 > Double-click to run — no Python or extra dependencies needed.
+> **Intel Mac users**: GitHub Actions is phasing out Intel macOS runners, so prebuilt Intel binaries are no longer produced. Please run from source (see below).
 
 ## 🚀 Run from source
 

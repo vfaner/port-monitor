@@ -28,10 +28,6 @@ jobs:
             asset_name: PortMonitor-macos-arm64.zip
             build_cmd: pyinstaller --clean --noconfirm PortMonitor.spec
             pack_cmd: cd dist && zip -r ../PortMonitor-macos-arm64.zip PortMonitor.app
-          - os: macos-13
-            asset_name: PortMonitor-macos-intel.zip
-            build_cmd: pyinstaller --clean --noconfirm PortMonitor.spec
-            pack_cmd: cd dist && zip -r ../PortMonitor-macos-intel.zip PortMonitor.app
           - os: ubuntu-latest
             asset_name: PortMonitor-linux-x64.tar.gz
             build_cmd: pyinstaller --clean --noconfirm PortMonitor.spec
@@ -104,8 +100,8 @@ jobs:
             |---|---|---|
             | Windows 10/11 (x64)      | `PortMonitor-windows-x64.zip`  | 解压后双击 `PortMonitor.exe` |
             | macOS (Apple Silicon)    | `PortMonitor-macos-arm64.zip`  | 解压后双击 `PortMonitor.app`；首次运行若被拦，右键 → 打开 |
-            | macOS (Intel)            | `PortMonitor-macos-intel.zip`  | 同上 |
             | Linux (x64)              | `PortMonitor-linux-x64.tar.gz` | `tar xzf` 后 `./PortMonitor` 运行 |
 
             > 无需安装 Python 或任何依赖，双击即可运行。
             > 部分系统进程需管理员/root 权限才能扫描或停止。
+            > **Intel Mac 用户**：由于 GitHub 已逐步下架 Intel macOS runner，请从源码运行：`pip install -r requirements.txt && python port_monitor.py`
