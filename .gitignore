@@ -10,7 +10,6 @@ build/
 dist/
 wheels/
 *.manifest
-*.spec
 .Python
 
 # ============ 虚拟环境 ============
