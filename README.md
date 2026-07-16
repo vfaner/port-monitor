@@ -6,6 +6,12 @@
 ![python](https://img.shields.io/badge/python-3.8%2B-green)
 ![license](https://img.shields.io/badge/license-Apache--2.0-orange)
 
+📖 [English](./README_en.md) · **简体中文**
+
+## 📸 界面预览
+
+![端口卫士界面](./assets/port-monitor.png)
+
 ## ✨ 功能
 
 - 启动即扫描本机**正在监听的端口**，表格展示：
