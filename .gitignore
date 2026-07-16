@@ -47,7 +47,7 @@ Desktop.ini
 # ============ PyInstaller 打包产物 ============
 build/
 dist/
-*.spec
+# PortMonitor.spec 需要入库供 CI 使用，不忽略 *.spec
 
 # ============ 日志 / 临时文件 ============
 *.log

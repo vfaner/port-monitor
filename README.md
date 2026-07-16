@@ -21,7 +21,20 @@
   - 标题栏可拖动、双击最大化/还原
 - 跨平台：Windows / macOS / Linux（基于 `psutil`，无平台相关命令）
 
-## 🚀 运行
+## 📥 下载可执行文件（无需 Python 环境）
+
+前往 [Releases 页面](https://github.com/vfaner/port-monitor/releases/latest) 下载：
+
+| 系统 | 文件 | 使用方式 |
+|---|---|---|
+| Windows 10/11 (x64)   | `PortMonitor-windows-x64.zip`  | 解压 → 双击 `PortMonitor.exe` |
+| macOS (Apple Silicon) | `PortMonitor-macos-arm64.zip`  | 解压 → 双击 `PortMonitor.app`；首次被拦时右键 → 打开 |
+| macOS (Intel)         | `PortMonitor-macos-intel.zip`  | 同上 |
+| Linux (x64)           | `PortMonitor-linux-x64.tar.gz` | `tar xzf ...` → `./PortMonitor` |
+
+> 双击即用，不需要装 Python 或任何依赖。
+
+## 🚀 从源码运行
 
 ```bash
 pip install -r requirements.txt
