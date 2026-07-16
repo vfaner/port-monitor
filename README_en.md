@@ -12,19 +12,26 @@ A beautifully designed cross-platform desktop tool for **detecting port usage on
 
 ![Port Monitor UI](./assets/port-monitor.png)
 
+## 💡 Why this exists
+
+During day-to-day development, IDEs or debug tools can crash unexpectedly, terminal processes get stuck, and the ports they held onto never get released. The next time you start a service, you're greeted with the classic **`Address already in use`** error. The traditional fix is a handful of commands (`netstat -ano | findstr` → `taskkill /PID`) — tedious to type and easy to get wrong.
+
+I built this cross-platform desktop tool so my teammates and I could **kill a port hog with a single click**. It shows every listening port and its owning process in a table, and hitting **Stop** clears the occupation instantly — no more memorizing shell incantations.
+
 ## ✨ Features
 
-- Scans **all listening ports on your machine** at startup, showing:
+- Scans **all listening ports on your machine** (TCP LISTEN and UDP) at startup, showing:
   - App name · PID · Port · CPU % · Memory % · Action
-- **"Stop" button in the Action column**: after confirmation, the process is killed and the row is immediately removed from the table
+- **"Stop" button in the Action column**: after confirmation, the process is killed and **every row for that PID** is immediately removed from the table
 - CPU / memory usage is color-coded (red / orange / gray) so resource hogs stand out at a glance
 - Top search box: filter by app name / port / PID in real time
 - Auto-refreshes every 5 seconds; you can also click **Refresh** manually
-- **Frameless, rounded, frosted-glass window** with a custom title bar:
+- **Frameless rounded window with a blue-gradient title bar**, custom title bar:
   - ❤ Sponsor: pops up a QR code, with **WeChat / Alipay / QQ** tabs
-  - Get latest version: opens the GitHub repository
+  - Project link: opens the GitHub repository
   - Minimize / Maximize / Close
   - Drag the title bar; double-click to toggle maximize / restore
+- Falls back to a per-process scan when global connection info requires elevated privileges, so you still see whatever the current user can enumerate
 - Cross-platform: Windows / macOS / Linux (built on `psutil`, no platform-specific commands)
 
 ## 📥 Download prebuilt binaries (no Python required)
